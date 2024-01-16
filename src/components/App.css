@@ -1,0 +1,247 @@
+@keyframes runningAnts {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.bg-translucent-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(93, 124, 173, 0.4) 0%,
+    rgba(98, 109, 131, 0.95) 50%,
+    rgba(62, 47, 107, 0.7) 100%
+  );
+}
+
+.address-card {
+  will-change: transform;
+  transition: transform 300ms ease-out;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.address-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 16px;
+  padding: 1px;
+  background: rgb(212 212 212 / 0.08);
+  background-size: 200% 100%;
+  animation: runningAnts 5s linear infinite;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  z-index: -1;
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+.address-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 16px;
+  padding: 5px;
+  background: repeating-linear-gradient(
+    90deg,
+    rgb(115, 153, 218),
+    rgb(21, 59, 135),
+    rgb(36, 21, 74),
+    rgb(115, 153, 218),
+    rgb(21, 59, 135),
+    rgb(10, 6, 20),
+    rgb(115, 153, 218)
+  );
+  background-size: 200% 100%;
+  animation: runningAnts 5s linear infinite;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+.address-card.isLoading::after {
+  opacity: 1;
+}
+
+
+@keyframes moveToTop {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-35vh);
+  }
+}
+
+@keyframes moveToMiddle {
+  from {
+    transform: translateY(-35vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@media screen and (min-height: 950px) {
+  @keyframes moveToTop {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-40vh);
+    }
+  }
+
+  @keyframes moveToMiddle {
+    from {
+      transform: translateY(-40vh);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) and (max-height: 1180px) {
+  @keyframes moveToTop {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-34vh);
+    }
+  }
+
+  @keyframes moveToMiddle {
+    from {
+      transform: translateY(-34vh);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+}
+
+@media screen and (max-height: 668px) {
+  @keyframes moveToTop {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-29vh);
+    }
+  }
+
+  @keyframes moveToMiddle {
+    from {
+      transform: translateY(-29vh);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+}
+
+@keyframes bottomToMiddle {
+  from {
+    transform: translateX(-50%) translateY(0);
+  }
+  to {
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.full-screen-animate {
+  animation: moveToTop 0.3s forwards ease-in-out;
+}
+
+.return-to-middle-animate {
+  animation: moveToMiddle 0.3s ease-in-out;
+}
+
+.bounce {
+  animation: bounce 0.5s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+.copy-icon {
+  transition: transform 0.3s;
+}
+
+.icon-animate {
+  animation: icon-pulse 0.3s ease-in-out;
+}
+
+@keyframes icon-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.grid-container {
+  transition: max-height 0.3s ease-in-out;
+}
+
+.grid-container::-webkit-scrollbar {
+  display: none;
+}
+.grid-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+.grid-container.collapsed {
+  max-height: 140px;
+}
+
+.grid-container.expanded {
+  max-height: 452px;
+}
+
+.token-logo {
+  width: 30px;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.swiper-container {
+  width: 100%;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-container::-webkit-scrollbar {
+    -ms-overflow-style: none;
+  scrollbar-width: none;
+}
