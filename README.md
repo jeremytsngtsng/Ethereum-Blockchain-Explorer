@@ -1,6 +1,5 @@
 # Jeremy Tsang - Ethereum Address Explorer
 
-Thank you for considering my application to WalletConnect. Presented is my take home task for Ethereum Address Explorer.
 With a scope of 1 day, I tried my best to come up with a comfortable, easy to use and fluid design, whilst still providing the essential details as a blockchain explorer.
 With the time scope in mind, I have conducted E2E testing on mobile and laptop to ensure the user flow is smooth.
 
