@@ -1,4 +1,4 @@
-# Jeremy Tsang - Ethereum Blockchain Explorer
+# Ethereum Blockchain Explorer
 
 Easy to use and fluid design, providing the essential details as a blockchain explorer.
 
